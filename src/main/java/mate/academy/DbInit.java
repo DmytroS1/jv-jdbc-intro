@@ -13,9 +13,9 @@ public class DbInit {
     public static void initialize() {
         try (Connection connection = ConnectionUtil.getConnection();
              Statement statement = connection.createStatement()) {
-                String sql = readSqlScript(FILE_SQL);
-                statement.execute(sql);
-                System.out.println("DB init successfully!");
+            String sql = readSqlScript(FILE_SQL);
+            statement.execute(sql);
+            System.out.println("DB init successfully!");
         } catch (Exception e) {
             throw new DataProcessingException("DB init failed", e);
         }
