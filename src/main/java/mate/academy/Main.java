@@ -7,7 +7,7 @@ import mate.academy.model.Book;
 
 public class Main {
     public static void main(String[] args) {
-        DBInit.initialize();
+        DbInit.initialize();
 
         Book book = new Book();
         book.setId(1L);
